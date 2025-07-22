@@ -536,6 +536,9 @@ video {
 .fixed {
   position: fixed;
 }
+.inset-0 {
+  inset: 0px;
+}
 .bottom-0 {
   bottom: 0px;
 }
@@ -612,6 +615,9 @@ video {
 }
 .flex-grow {
   flex-grow: 1;
+}
+.resize {
+  resize: both;
 }
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -815,6 +821,9 @@ video {
 }
 .opacity-75 {
   opacity: 0.75;
+}
+.opacity-40 {
+  opacity: 0.4;
 }
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);

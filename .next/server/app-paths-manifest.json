@@ -1,3 +1,4 @@
 {
+  "/api/signed-url/route": "app/api/signed-url/route.js",
   "/page": "app/page.js"
 }

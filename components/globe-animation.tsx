@@ -27,7 +27,7 @@ export const GlobeAnimation = () => {
 
     // Grid lines
     const drawGrid = () => {
-      ctx.strokeStyle = "rgba(100, 100, 100, 0.3)";
+      ctx.strokeStyle = "rgba(139, 92, 246, 0.2)";
       ctx.lineWidth = 1;
 
       // Longitude lines
@@ -71,7 +71,7 @@ export const GlobeAnimation = () => {
 
     // Dots/particles
     const drawDots = () => {
-      ctx.fillStyle = "rgba(150, 150, 150, 0.6)";
+      ctx.fillStyle = "rgba(139, 92, 246, 0.4)";
       
       for (let i = 0; i < 200; i++) {
         const lat = Math.asin(2 * Math.random() - 1);

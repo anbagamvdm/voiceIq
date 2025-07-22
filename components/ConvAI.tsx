@@ -60,10 +60,10 @@ export function ConvAI() {
 
   return (
     <div className={"flex justify-center items-center gap-x-4"}>
-      <Card className={"rounded-3xl"}>
+      <Card className={"rounded-3xl border-border/50 bg-card/80 backdrop-blur-sm shadow-2xl"}>
         <CardContent>
           <CardHeader>
-            <CardTitle className={"text-center"}>
+            <CardTitle className={"text-center text-xl font-medium text-foreground"}>
               {conversation.status === "connected"
                 ? conversation.isSpeaking
                   ? `Agent is speaking`
@@ -85,7 +85,7 @@ export function ConvAI() {
 
             <Button
               variant={"outline"}
-              className={"rounded-full"}
+              className={"rounded-full border-primary/20 hover:bg-primary/10 hover:border-primary/40 transition-all duration-200"}
               size={"lg"}
               disabled={
                 conversation !== null && conversation.status === "connected"
@@ -96,7 +96,7 @@ export function ConvAI() {
             </Button>
             <Button
               variant={"outline"}
-              className={"rounded-full"}
+              className={"rounded-full border-primary/20 hover:bg-primary/10 hover:border-primary/40 transition-all duration-200"}
               size={"lg"}
               disabled={conversation === null}
               onClick={stopConversation}

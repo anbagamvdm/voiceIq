@@ -1,8 +1,15 @@
 "use client";
-import { GlobeAnimation } from "./globe-animation";
+import { motion } from "framer-motion";
 
 export const BackgroundWave = () => {
   return (
-    <GlobeAnimation />
+    <motion.video
+      src="/backwave.mp4"
+      autoPlay
+      muted
+      loop
+      controls={false}
+      className="fixed  object-cover top-0 z-[-1]  hidden md:block pointer-events-none  "
+    />
   );
 };

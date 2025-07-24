@@ -1,8 +1,8 @@
 import type {Metadata} from "next";
 import "./globals.css";
-import {BackgroundWave} from "@/components/background-wave";
 import Link from "next/link";
-import {ElevenLabsLogo, GithubLogo} from "@/components/logos";
+import Image from "next/image";
+import { BackgroundWave } from "@/components/background-wave";
 
 export const metadata: Metadata = {
     title: "ConvAI",
@@ -11,39 +11,30 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang="en" className={"h-full w-full"}>
-        <body className={`antialiased w-full h-full flex flex-col bg-background text-foreground`}>
-        <div className="flex flex-col flex-grow w-full items-center justify-center sm:px-4">
-            <nav
-                className={
-                    "sm:fixed w-full top-0 left-0 grid grid-cols-2 py-6 px-8 z-50"
-                }
-            >
-                <div className={"flex"}>
-                    <Link href={"/"} prefetch={true}>
-                        <ElevenLabsLogo
-                            className={"h-[15px] w-auto hover:text-primary transition-colors"}
-                        />
-                    </Link>
-                </div>
-
-                <div className={"flex gap-4 justify-end"}>
-                    <Link
-                        href="https://github.com/jonatanvm/convai-demo"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={"py-0.5"}
-                        aria-label="View source on GitHub"
+            <body className="antialiased w-full h-full flex flex-col bg-white">
+                <div className="flex flex-col flex-grow w-full items-center justify-center sm:px-4">
+                    <nav
+                        className={
+                            "sm:fixed w-full top-0 left-0 grid grid-cols-2 py-4 px-8"
+                        }
                     >
-                        <GithubLogo
-                            className={"w-5 h-5 hover:text-primary transition-colors text-foreground"}
-                        />
-                    </Link>
+                        <div className="flex" >
+                            <Link href="/" prefetch={true}>
+                                <Image
+                                    src="/alai.png"
+                                    alt="Logo"
+                                    width={200}
+                                    height={75}
+                                    className="hover:opacity-80  mb-20"
+                                />
+                            </Link>
+                        </div>
+                    </nav>
+                    {children}
+                
+                    {/* <BackgroundWave /> */}
                 </div>
-            </nav>
-            {children}
-            <BackgroundWave/>
-        </div>
-        </body>
+            </body>
         </html>
     );
 }
